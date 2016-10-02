@@ -1,15 +1,21 @@
 
 <html>
   <head>
-      <title>{{ $title }}</title>
+      <title><?php echo e($title); ?></title>
   </head>
-  {{ HTML::script('js/js.1.11.1.min.js') }}
-  {{ HTML::script('js/bootstrap.min.j') }}
-  {{ HTML::script('js/bootstrap.js') }}
+  <?php echo e(HTML::script('js/js.1.11.1.min.js')); ?>
 
-  {{ HTML::style('css/bootstrap-theme.min.css') }}
-  {{ HTML::style('css/bootstrap.min.css') }}
-  {{ HTML::style('css/bootstrap.css') }}
+  <?php echo e(HTML::script('js/bootstrap.min.j')); ?>
+
+  <?php echo e(HTML::script('js/bootstrap.js')); ?>
+
+
+  <?php echo e(HTML::style('css/bootstrap-theme.min.css')); ?>
+
+  <?php echo e(HTML::style('css/bootstrap.min.css')); ?>
+
+  <?php echo e(HTML::style('css/bootstrap.css')); ?>
+
 
 <body>
 
@@ -162,7 +168,7 @@
         </div>
         <div class="col-sm-9 col-md-9">
             <div class="well">
-              @yield('konten')
+              <?php echo $__env->yieldContent('konten'); ?>
             </div>
         </div>
         </div>

@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/admin/index', 'Admin\HomeController@index');
-Route::get('/admin/produk/index', 'Admin\produk\ProdukController@index');
+Route::resource('/admin/produk','Admin\Produk\ProdukController');
+
+/*Route::get('/admin/produk/index', 'Admin\produk\ProdukController@index');
 Route::get('/admin/produk/add', 'Admin\produk\ProdukController@addProduk');
 Route::get('/admin/produk/edit/{ids}', 'Admin\produk\ProdukController@edit');
+*/
